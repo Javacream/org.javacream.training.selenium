@@ -11,11 +11,15 @@ from selenium.webdriver.firefox.options import Options
 from search_page import SearchPage
 class TestDemo(unittest.TestCase):
   def setUp(self):
-    geckodriver_path = "/snap/bin/geckodriver"
     options = Options()
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    driver_service = webdriver.FirefoxService(options=options, executable_path=geckodriver_path)
+    # Linux need geckodriver path 
+    #geckodriver_path = "/snap/bin/geckodriver"
+    # driver_service = webdriver.FirefoxService(options=options, executable_path=geckodriver_path)
+
+    # Windows
+    driver_service = webdriver.FirefoxService(options=options)
 
     self.driver = webdriver.Firefox(service=driver_service)
     self.wait = WebDriverWait(self.driver, 10)
