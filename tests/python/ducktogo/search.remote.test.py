@@ -1,4 +1,5 @@
 import unittest
+import time
 from  selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -14,7 +15,7 @@ class TestDemo(unittest.TestCase):
     options = Options()
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    self.driver = webdriver.Remote(command_executor='http://localhost:4444', options=options)
+    self.driver = webdriver.Remote(command_executor='http://javacream.eu:4444', options=options)
     self.wait = WebDriverWait(self.driver, 10)
     self.vars = {}
     self.page = SearchPage(self.driver, self.wait)
@@ -34,6 +35,12 @@ class TestDemo(unittest.TestCase):
   def test_make_search(self):
     self.page.go_to_search_page()
     self.page.make_a_search("Javacream")
-
+    time.sleep(10)
+    self.page.go_to_search_page()
+    self.page.make_a_search("Perry Rhodan")
+    time.sleep(10)
+    self.page.go_to_search_page()
+    self.page.make_a_search("The Beatles")
+    time.sleep(10)
 if __name__ == '__main__':
   unittest.main()
