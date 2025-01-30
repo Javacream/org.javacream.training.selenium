@@ -1,0 +1,74 @@
+{
+  "id": "ecd9f6ea-73ce-4d01-a635-b7b0c15656d6",
+  "version": "2.0",
+  "name": "Training",
+  "url": "http://javacream.org",
+  "tests": [{
+    "id": "cd5a02dd-a466-4ec8-a0c1-7bcc07837af2",
+    "name": "Demo",
+    "commands": [{
+      "id": "72e948c0-16ef-474a-b877-49cf65ac38c4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44cd603a-0b4f-439f-b89e-d2ae5c713d82",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1120x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf01f259-d595-4e89-afcf-1939a7c3c9b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Enterprise Java')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#enterprise')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d669fbcc-58f1-4df9-b2a3-f8ebd8c002e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'e-learning')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#elearning')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "166db3e8-5c5d-4be5-9d9a-3c8dd0f249e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(10) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(10) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Links')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[10]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#links')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bad3b07d-d6c3-4f39-8bda-f6508dabf53a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": [],
+  "plugins": []
+}
