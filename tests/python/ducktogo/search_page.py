@@ -1,3 +1,4 @@
+from  selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
@@ -14,7 +15,7 @@ class SearchPage():
     def get_title(self):
         return self.driver.title
     
-    def __init__(self, driver, wait):
+    def __init__(self, driver: webdriver.Firefox, wait):
         self.driver = driver
         self.wait = wait
         self.url = "https://duckduckgo.com/"
