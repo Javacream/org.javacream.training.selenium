@@ -6,12 +6,17 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options
+import sys
+sys.path.append('tests/python')
+import driver_configuration as config
 
 class SearchPage:
 
-    def __init__(self, driver):
+    def __init__(self):
         self.url = 'https://duckduckgo.com/'
-        self.driver = driver
+        self.driver: config.Browser = config.local()
+    def close(self):
+        self.driver.quit()
 
     def get_title(self):
         self.driver.get(self.url)
