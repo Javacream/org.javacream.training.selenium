@@ -13,6 +13,6 @@ def local():
 
 def grid():
     options = Options()
-    driver = webdriver.Remote(command_executor='http://javacream.eu:4444', options=options)
+    driver = webdriver.Remote(command_executor='http://localhost:4444', options=options)
     return driver
 

@@ -10,25 +10,22 @@ import sys
 sys.path.append('tests/python')
 import driver_configuration as config
 
-class SearchPage:
-    SEARCH_INPUT_SELECTION = (By.ID, "searchbox_input")
+class ChallengingPage:
     def __init__(self):
-        self.url = 'https://duckduckgo.com/'
+        self.url = 'https://the-internet.herokuapp.com/challenging_dom'
         self.driver: config.Browser = config.local()
+        self.driver.get(self.url)
     def close(self):
         self.driver.quit()
 
     def get_title(self):
-        self.driver.get(self.url)
         return self.driver.title   
 
-
-    def make_search(self, search_text):
-        self.driver.get(self.url)
-        search_input = self.driver.find_element(by=By.ID, value="searchbox_input")
-        search_button = self.driver.find_element(by=By.XPATH, value="//*[@id='searchbox_homepage']//*[@type='submit']")
-        search_input.send_keys(search_text)
-        search_button.click()
-        self.driver.save_screenshot("results/results.png")
-
+    def get_blue_button(self):
+        buttons = self.driver.find_elements(By.CLASS_NAME, "button")
+        return [element for element in buttons if element.get_attribute["class"] == ["button"]]
+    def get_table_row_four(self):
+        pass
  
+    def get_table_cell_one_five(self):
+        pass

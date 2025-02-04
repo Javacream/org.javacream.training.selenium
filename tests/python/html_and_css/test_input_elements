@@ -3,7 +3,7 @@ import sys
 sys.path.append('tests/python')
 from base_firefox_test import BaseFirefoxTest
 from selenium.webdriver.common.by import By
-
+import time
 class InputElementsTests(BaseFirefoxTest):
 
     def test_input_elements(self):
@@ -12,6 +12,7 @@ class InputElementsTests(BaseFirefoxTest):
         self.driver.get("https://www.selenium.dev/selenium/web/inputs.html")
 
         # Click on the checkbox
+        time.sleep(40)
         check_input = self.driver.find_element(By.NAME, "checkbox_input")
         check_input.click()
 
