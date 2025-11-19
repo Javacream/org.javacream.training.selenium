@@ -35,7 +35,6 @@ class LocatorTests(BaseFirefoxTest):
 
     def test_link_text(self):
         element = self.driver.find_element(By.LINK_TEXT, "Selenium Official Page")
-
         self.assertIsNotNone(element)
         self.assertEqual("https://www.selenium.dev/", element.get_attribute("href"))
 
